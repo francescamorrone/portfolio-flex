@@ -301,6 +301,14 @@ main section h2::before {
     }
 
 /* sezione esperienze */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    min-width: 480px;
+}
+
 table,
 #esperienza {
     width: 100%;
