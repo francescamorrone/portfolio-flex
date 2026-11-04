@@ -19,12 +19,13 @@ body {
 
 
 ::-webkit-scrollbar {
-    width: 6px; /* Larghezza della barra di scorrimento verticale */
+    width: 6px;
+    /* Larghezza della barra di scorrimento verticale */
 }
 
 ::-webkit-scrollbar-track {
     background: transparent;
-    margin-block: 20px; 
+    margin-block: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -74,15 +75,15 @@ img {
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.18);
     background-color: #ECE6D8;
-    padding: 30px 20px 20px 20px; 
+    padding: 30px 20px 20px 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     flex-direction: column;
     width: 90%;
     max-width: 480px;
     max-height: 90vh;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .modal label {
@@ -97,13 +98,13 @@ img {
 
 .close {
     position: absolute;
-    top: 15px; 
+    top: 15px;
     right: 15px;
     background: rgba(230, 109, 90, 0.285);
     color: rgb(206, 31, 31);
     font-size: 0.8rem;
     width: 25px;
-    height: 25px; 
+    height: 25px;
     padding: 0;
     border-radius: 50%;
     border: none;
@@ -111,7 +112,7 @@ img {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-	 transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .close:hover {
@@ -214,9 +215,6 @@ main section {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* main section:first-child {
-    margin-top: -100px;
-} */
 
 /*rombo*/
 main section h2::before {
@@ -257,33 +255,35 @@ main section h2::before {
 }
 
 /*sezione competenze*/
+/* Nasconde le checkbox predefinite */
+    #competenze input[type="checkbox"] {
+        display: none;
+    }
 
-#competenze td p:first-child {
-    color: #172136;
-    font-weight: bold;
-}
+    #competenze label {
+        display: inline-block;
+        background-color: #1d3564; /* Blu scuro */
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+        margin-right: 6px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
 
-#competenze p:nth-child(3) {
-    color: #475C85;
-    font-style: italic;
-}
+    /* Stile per l'etichetta quando la checkbox è selezionata */
+    #competenze input[type="checkbox"]:checked + label {
+        background-color: #f6b419;
+        color: #1d3564;
+    }
 
-.tabella-competenze p:nth-child(2) {
-    color: rgb(70, 70, 70);
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
+/* sezione esperienze */
 table,
 #esperienza {
     width: 100%;
     border-collapse: collapse;
-}
-
-
-.tabella-competenze {
-    border-bottom: 1px solid #ECE6D8;
-    padding: 15px;
 }
 
 td {
@@ -299,51 +299,6 @@ th {
     border-bottom: 1px solid #ECE6D8;
 }
 
-
-.tabella-competenze tr th:first-child {
-    width: 40%;
-}
-
-.tabella-competenze tr th:last-child {
-    width: 60%;
-}
-
-.tabella-competenze i {
-    padding-right: 10px;
-}
-
-/* .gray-bar {
-    height: 15px;
-    border-radius: 20px;
-    background-color: #ECE6D8;
-}
-
-.first-bar,
-.second-bar,
-.third-bar,
-.forth-bar,
-.fifth-bar {
-    height: 15px;
-    border-radius: 20px;
-    width: 80%;
-    background-color: hsl(45, 90%, 60%);
-}
-
-.second-bar {
-    width: 70%;
-}
-
-.third-bar {
-    width: 50%;
-}
-
-.forth-bar {
-    width: 40%;
-}
-
-.fifth-bar {
-    width: 60%;
-} */
 
 #esperienze caption {
     text-align: left;
@@ -527,7 +482,6 @@ table {
         padding: 10px;
     }
 
-    ;
 
     main {
         padding: 40px 20px;
