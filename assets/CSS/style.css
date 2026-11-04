@@ -265,6 +265,13 @@ main section h2::before {
 }
 
 /*sezione competenze*/
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap:8px;
+    padding: 0;
+}
+
 /* Nasconde le checkbox predefinite */
     #competenze input[type="checkbox"] {
         display: none;
@@ -272,9 +279,9 @@ main section h2::before {
 
     #competenze label {
         display: inline-block;
-        background-color: #1d3564; /* Blu scuro */
+        background-color: #1d3564;
         color: #ffffff;
-        padding: 8px 16px;
+        padding: 6px 14px;
         border-radius: 20px;
         font-weight: bold;
         font-size: 13px;
@@ -285,7 +292,7 @@ main section h2::before {
 
     /* Stile per l'etichetta quando la checkbox è selezionata */
     #competenze input[type="checkbox"]:checked + label {
-        background-color: #f6b419;
+        background-color:  hsl(45, 90%, 60%);
         color: #1d3564;
     }
 
@@ -318,6 +325,12 @@ th {
 
 /*progetti*/
 
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
 .github {
     color: #1F3D7A;
     font-weight: bold;
@@ -330,10 +343,11 @@ th {
 }
 
 .card-progetto {
-    position: relative;
+   flex: 1 1 260px;
+   position: relative;
 }
 
-#progetti div:first-of-type h3::after {
+.projects-grid div:first-of-type h3::after {
     content: "NEW";
     font-family: 'Inter', Arial, sans-serif;
     padding: 2px 8px;
@@ -364,7 +378,7 @@ th {
 }
 
 
-#progetti div:nth-of-type(odd) {
+.projects-grid div:nth-of-type(odd) {
     background-color: #F9F5EA;
     border-radius: 10px;
     padding: 10px 20px;
@@ -372,7 +386,7 @@ th {
     border-left: 6px solid #193366;
 }
 
-#progetti div:nth-of-type(even) {
+.projects-grid div:nth-of-type(even) {
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     border: 1px solid #F0E7C8;
