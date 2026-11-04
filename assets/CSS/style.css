@@ -33,12 +33,12 @@ body {
     border-radius: 10px;
 }
 
-
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* bottone per tornare in alto */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -55,6 +55,7 @@ img {
     text-decoration: none;
 }
 
+/* form modale */
 .overlay {
     position: fixed;
     top: 0;
@@ -140,7 +141,6 @@ header {
     background-position: center;
     color: #fff;
     text-align: center;
-    /* padding: 60px 20px 40px; */
     padding: 20px 16px 20px;
     border-bottom: 4px solid hsl(45, 90%, 60%);
     position: sticky;
@@ -162,6 +162,13 @@ h2,
 h3 {
     font-family: 'Playfair Display', Georgia, serif;
     color: #193366;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
 }
 
 nav a {
@@ -227,18 +234,21 @@ main section h2::before {
 
 /*sezione "chi sono"*/
 
+.bio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .avatar {
     width: 150px;
     height: 150px;
     border: 4px solid hsl(45, 90%, 60%);
     border-radius: 50%;
     display: block;
-    margin: 0 auto 16px;
+    margin: 0 auto;
 }
 
-#competenze {
-    clear: both;
-}
 
 #chi-sono {
     background-color: #ffffff;
@@ -482,6 +492,15 @@ table {
         padding: 10px;
     }
 
+    .bio {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        margin:0;
+        flex-shrink: 0;
+    }
 
     main {
         padding: 40px 20px;
@@ -491,19 +510,8 @@ table {
         padding: 32px;
     }
 
-    .avatar {
-        float: left;
-        margin-right: 15px;
-    }
-
     .modal form,
     .modal form button {
         width: 100%;
-    }
-}
-
-@media (min-width: 1200px) {
-    section {
-        max-width: 920px;
     }
 }
