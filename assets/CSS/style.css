@@ -148,6 +148,10 @@ header {
     z-index: 100;
 }
 
+nav ul li:first-child {
+    order: 99;
+}
+
 #site-header h1 {
     font-size: clamp(1.5rem,
             4vw,
@@ -477,7 +481,6 @@ button:hover {
     height: 40px;
     line-height: 40px;
     text-align: center;
-
     text-decoration: none;
 }
 
@@ -486,19 +489,9 @@ button:hover {
     color: #172136;
 }
 
-
 footer {
     padding: 40px 20px;
 }
-
-.table-wrapper {
-    overflow-x: auto;
-}
-
-table {
-    min-width: 480px;
-}
-
 
 
 @media (min-width: 768px) {
