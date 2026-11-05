@@ -55,6 +55,20 @@ img {
     text-decoration: none;
 }
 
+.back-to-top:hover {
+    animation: pulse-ring 2.2s ease-out infinite;
+    transform: scale(1.08);
+}
+
+@keyframes pulse-ring {
+    0% {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 6px rgba(34,76,161,0.6);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 0 0 6px rgba(34,76,161,0);
+    }
+}
+
 /* form modale */
 .overlay {
     position: fixed;
@@ -95,6 +109,30 @@ img {
 
 .overlay[hidden] {
     display: none;
+}
+
+@keyframes overlay-in { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
+
+@keyframes modal-in { 
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, -40%); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, -50%); 
+    } 
+}
+
+.overlay:not([hidden]) {
+    animation: overlay-in 0.3s ease-out;
+}
+
+.overlay:not([hidden]) .modal {
+    animation: modal-in 0.3s ease-out;
 }
 
 .close {
@@ -183,11 +221,13 @@ nav a {
     padding: 10px 16px;
     border-radius: 7px;
     display: inline-block;
+    transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
 }
 
 nav a:hover {
     background-color: hsl(45, 90%, 60%);
     color: #193366;
+    transform: translateY(-2px);
 }
 
 #site-header nav li {
@@ -251,6 +291,11 @@ main section h2::before {
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    transition: transform 300ms ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05) rotate(-2deg);
 }
 
 
@@ -292,6 +337,12 @@ main section h2::before {
         margin-right: 6px;
         margin-bottom: 8px;
         cursor: pointer;
+        transition: transform 150ms ease, background-color 150ms ease;
+    }
+
+    #competenze label:hover {
+        transform: translateY(-2px);
+        background-color: hsl(220, 60%, 40%);
     }
 
     /* Stile per l'etichetta quando la checkbox è selezionata */
@@ -357,6 +408,13 @@ th {
 .card-progetto {
    flex: 1 1 260px;
    position: relative;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+   transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.card-progetto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
 }
 
 .projects-grid div:first-of-type h3::after {
@@ -371,6 +429,21 @@ th {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.projects-grid div:first-of-type h3:hover::after {
+    animation: pulse-badge 2s ease-in-out infinite;
+    transform-origin: top-right;
+}
+
+@keyframes pulse-badge {
+    0%,
+    100% {
+        transform: :scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
 }
 
 #other-projects {
@@ -400,7 +473,6 @@ th {
 
 .projects-grid div:nth-of-type(even) {
     background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     border: 1px solid #F0E7C8;
     border-radius: 10px;
     padding: 10px 20px;
@@ -528,5 +600,13 @@ footer {
     .modal form,
     .modal form button {
         width: 100%;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 }
