@@ -184,6 +184,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+
+    transition: padding 0.3s ease;
 }
 
 nav ul li:first-child {
@@ -198,6 +200,21 @@ nav ul li:first-child {
     margin-bottom: auto;
     color: #fff;
     font-family: 'Playfair Display', Georgia, serif;
+}
+
+header.scrolled {
+    padding: 15px 16px;
+}
+
+header.scrolled .tagline {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+header.scrolled nav a {
+    padding: 6px 10px;
+    font-size: 0.85rem;
 }
 
 h2,
@@ -221,7 +238,7 @@ nav a {
     padding: 10px 16px;
     border-radius: 7px;
     display: inline-block;
-    transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+    transition: background-color 200ms ease, color 200ms ease, transform 200ms ease, padding 300ms ease, font-size 300ms ease;
 }
 
 nav a:hover {
@@ -246,6 +263,11 @@ nav li {
 .tagline {
     font-style: italic;
     color: #F0E7C8;
+    max-height: 50px;
+    opacity: 1;
+    overflow: hidden;
+    margin: 16px 0;
+    transition: all 0.3s ease;
 }
 
 /*icone navbar*/
@@ -439,7 +461,7 @@ th {
 @keyframes pulse-badge {
     0%,
     100% {
-        transform: :scale(1);
+        transform: scale(1);
     }
     50% {
         transform: scale(1.08);

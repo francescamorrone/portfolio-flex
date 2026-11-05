@@ -4,6 +4,17 @@ const chiusiContatti = document.querySelector('#chiusi-contatti');
 const myForm = document.querySelector('form');
 const submitForm = document.querySelector("#submit-form");
 
+const header = document.querySelector('#site-header');
+
+//toggle class scrolled all'header
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+})
+
 const dataForm = {
     name: "",
     email: "",
