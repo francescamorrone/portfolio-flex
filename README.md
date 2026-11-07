@@ -8,7 +8,7 @@ Presenta il mio percorso, le competenze che sto approfondendo, le esperienze e i
 
 ## Anteprima
 
-🔗 **Demo live:** _aggiungi qui il link (GitHub Pages, Netlify...)_
+🔗 **Demo live:** (https://francescamorrone.github.io/portfolio-flex/)
 
 ## Sezioni
 
