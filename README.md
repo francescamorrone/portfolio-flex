@@ -78,3 +78,18 @@ Non servono installazioni né build.
 | Sfondo pagina | `#f4f1ec` |
 | Sfondo modale | `#ECE6D8` |
 | Footer | `#172136` |
+
+## Dalla v1.0 alla v2.0
+
+| Aspetto | v1.0 | v2.0 |
+| --- | --- | --- |
+| **Layout** | Flusso normale dei blocchi e `float`, senza Flexbox | Flexbox (`display: flex`, `flex-wrap`, `gap`) |
+| **Navigazione** | Voci in linea (`display: inline`) distanziate con `margin-right` | Lista flex con `flex-wrap` e `gap` |
+| **Chi Sono** | Avatar con `float: left` da 768px in su | Avatar e testo affiancati con Flexbox |
+| **Competenze** | Tabella con una descrizione per ogni tecnologia | "Pillole" interattive con checkbox nascoste e `:checked`, senza JavaScript |
+| **Card progetti** | Card impilate una sotto l'altra | Griglia flessibile che va a capo (`flex: 1 1 260px`), con effetto hover |
+| **Header** | Sticky, sempre uguale | Sticky, si compatta dopo 50px di scroll e la tagline scompare |
+| **Animazioni** | Nessuna | Transizioni su navigazione, avatar e card, badge e pulsante "Torna in cima" animati |
+| **Modale di contatto** | Compare senza animazione | Compare con dissolvenza e scorrimento verso l'alto |
+| **Breakpoint** | nessuno | 768px |
+| **Tecnologie principali** | HTML e CSS | HTML, CSS e JavaScript |
