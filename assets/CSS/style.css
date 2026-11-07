@@ -81,6 +81,10 @@ img {
 
 }
 
+.overlay[hidden] {
+    display: none;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -107,9 +111,7 @@ img {
     margin-bottom: 3px;
 }
 
-.overlay[hidden] {
-    display: none;
-}
+
 
 @keyframes overlay-in { 
     from { opacity: 0; } 
